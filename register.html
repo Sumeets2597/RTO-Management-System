@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>CSS Registration Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    </head>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["Name_Of_Customer"].value;
+    if (x == null || x == "") {
+        alert(" Entry must be filled out");
+return false;
+}
+
+    }
+
+</script>
+    <body bgcolor="blue">    
+        <form  method="post" name="myForm" action="register.php" onsubmit="return validateForm()" class="register">
+            <h1>Registration</h1>
+            <fieldset class="row1">
+                <legend>Customer and Vehicle Details
+                </legend>
+                <p>
+                    <label>Name of the customer *
+                    </label>
+                    <input type="text" id="Name_Of_Customer" name="Name_Of_Customer"/>
+                    <label>Customer License No *
+                    </label>
+                    <input type="text" id="Cus_License_No" name="Cus_License_No"/>
+
+
+
+                </p>
+                <p>
+                    <label>Vehicle Type*
+                    </label>
+                    <input type="text" id="Vehicle_Type" name="Vehicle_Type"/>
+                    <label>Vehicle Category*
+                    </label>
+                    <input type="text" id="Vehicle_Category" name="Vehicle_Category"/>
+                    </label>
+    
+                </p>
+
+                 <p>
+                    <label>Vehicle Dealership with*
+                    </label>
+                    <input type="text" id="Dealership_With" name="Dealership_With"/>
+                    <label class="obinfo">* obligatory fields
+                    </label>
+                </p>
+            </fieldset>
+           
+            
+                <div class="infobox"><h4>Helpful Information</h4>
+                    <p>Here comes some explaining text, sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </fieldset>
+            <fieldset class="row4">
+                <legend>Terms and Mailing
+                </legend>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>*  I accept the <a href="#">Terms and Conditions</a></label>
+                </p>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>I want to receive personalized offers by your site</label>
+                </p>
+                <p class="agreement">
+                    <input type="checkbox" value=""/>
+                    <label>Allow partners to send me personalized offers and related services</label>
+                </p>
+            </fieldset>
+            <div><input type="submit" value="Submit"></div>
+           
+
+        </form>
+    </body>
+</html>
+
+
+
+
+
